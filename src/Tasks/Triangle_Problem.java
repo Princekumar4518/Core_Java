@@ -26,24 +26,27 @@ public class Triangle_Problem {
         int side3 = sc.nextInt();  // taking value from user
 
 
-
 //Using Ternary Operator
 
-
-        String Result=(side1==side2 && side2==side3)?"This is a Equilateral Triangle ":((side1==side2 ||side2==side3 || side3==side1)?"This is a Isosceles Triangle" : "This is a Scalene Triangle");
-        System.out.println(Result);
+//        if ((side1 + side2 > side3) || (side2 + side3 > side1) || (side3 + side1 > side2)) {
+//            String Result = (side1 == side2 && side2 == side3) ? "This is a Equilateral Triangle " : ((side1 == side2 || side2 == side3 || side3 == side1) ? "This is a Isosceles Triangle" : "This is a Scalene Triangle");
+//            System.out.println(Result);
+//        }
 
 
 // Using If else
-
-if(side1==side2 && side2==side3){
-    System.out.println("This is a Equilateral Triangle ");
-} else if (side1==side2 || side2==side3|| side3==side1) {
-    System.out.println("This is a Isosceles Triangle");
-}
-else {
-    System.out.println("This is a Scalene Triangle");
-}
+        if ((side1 + side2 > side3) && (side2 + side3 > side1) && (side3 + side1 > side2)) {
+            if (side1 == side2 && side2 == side3) {
+                System.out.println("This is a Equilateral Triangle ");
+            } else if (side1 == side2 || side2 == side3 || side3 == side1) {
+                System.out.println("This is a Isosceles Triangle");
+            } else {
+                System.out.println("This is a Scalene Triangle");
+            }
+        }
+           else{
+            System.out.println("This is not a Triangle");
+            }
+        }
     }
 
-}
