@@ -4,7 +4,7 @@
 
 package Java_Tasks;
 import java.util.Scanner;
-public class fourth_task {
+public class VowelorConst {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

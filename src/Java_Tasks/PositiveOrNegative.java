@@ -7,7 +7,7 @@
 
 package Java_Tasks;
 import java.util.Scanner;
-public class First_task {
+public class PositiveOrNegative {
 
     public static void main(String[] args) {
         // Check if a Number is Positive or Negative.

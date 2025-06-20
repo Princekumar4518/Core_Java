@@ -2,7 +2,7 @@
 //  Find the Maximum of Two Numbers.
 package Java_Tasks;
 import java.util.Scanner;
-public class Third_task {
+public class Max0fTwoNumbers {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
