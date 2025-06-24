@@ -3,34 +3,41 @@ import java.util.Scanner;
 public class daysMonthYear {
     public static void main(String[] args) {
 
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Total Days");
-        int totaldays;
 
+        int year = 0;
+        int month = 0;
+        int day = 0;
 
-        if(sc.hasNextInt()){
-            totaldays=sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the days .......... ");
+        int days;
+        if (!sc.hasNextInt() ) {
 
-
-            int year=totaldays/365;
-
-            int leftDays=totaldays%365;
-
-            int month=leftDays/30;
-            int days=leftDays%30;
-
-            if(year>0 ){
-                System.out.println(year+" "+"Year"+" "+month+" "+"Month"+" "+days+" "+"Days");
-            }
-            else if(month>0){
-                System.out.println(month+" "+"Month"+" "+days+" "+"Days");
-            }
-            else{
-                System.out.println(days+" "+"Days");
-            }
-
+            System.out.println("Enter only Positive integers");
+            sc.next();
         }
+        else {
+             days=sc.nextInt();
 
+            if (days >= 365) {
+                year = days / 365;           //Calculate years
+                int remaningDays = days % 365;   //Remaining days
 
+                month = remaningDays / 30;      //Calculate months
+                day = remaningDays % 30;        //Remaining days
+                System.out.println(year + " years " + "," + month + " months " + "," + day + " days ");
+            } else if (days >= 0 && days < 365) {
+                month = days / 30;
+                int rem_days = days % 30;
+
+                day = rem_days % 30;
+
+                System.out.println(year + " years " + "," + month + " months " + "," + day + " days ");
+            } else {
+                System.out.println("Days must be a positive number");
+            }
+            sc.close();
+        }
     }
+
 }
