@@ -45,5 +45,9 @@ public class While_factorial {
 
 
 
+        String s= "hello.com";
+                Boolean b=s.endsWith(".com");
+        System.out.println(b);
+
     }
 }

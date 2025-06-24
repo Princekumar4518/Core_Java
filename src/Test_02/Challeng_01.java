@@ -7,12 +7,17 @@ package Test_02;
 public class Challeng_01 {
     public static void main(String[] args) {
         Person John=new Person();
-        System.out.println( John.name="John");
-        System.out.println(John.Age=25);
+        String jname= John.name="John";
+        int jage=John.Age=25;
+
+        System.out.println( "Name :"+" "+jname+"  "+"Age :"+" "+jage);
+
 
         Person Alice=new Person();
-        System.out.println( Alice.name="John");
-        System.out.println(Alice.Age=25);
+        String Aname=Alice.name="Alice";
+        int Aage=Alice.Age=30;
+        System.out.println( "Name :"+" "+Aname+"  "+"Age :"+" "+Aage);
+
     }
 }
 
